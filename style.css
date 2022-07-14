@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    --primary-color: hsl(246, 80%, 60%);
+    --work: hsl(15, 100%, 70%);
+    --play: hsl(195, 74%, 62%);
+    --study: hsl(348, 100%, 68%);
+    --exercise: hsl(145, 58%, 55%);
+    --social: hsl(264, 64%, 52%);
+    --selfcare: hsl(43, 84%, 65%);
+
+    --ultra-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 29%);
+    --blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ultra-dark-blue);
+}
+
+.sidepanel {
+    display: flex;
+    flex-direction: column;
+    height: 520px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+.user {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    z-index: 10;
+    height: 100%;
+    padding: 30px;
+}
+
+.avatar-wrapper {
+    background-color: white;
+    border-radius: 50%;
+    width: 79px;
+    height: 79px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.avatar-wrapper img {
+    width: 75px;
+}
+
+.user p {
+    font-size: 15px;
+    color: var(--pale-blue);
+}
+
+.user h1 {
+    font-size: 40px;
+    font-weight: 300;
+    color: white;
+}
+
+.options {
+    background-color: var(--dark-blue);
+    border-radius: 0px 0px 10px 10px;
+    margin-top: -10px;
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.options ul li {
+    list-style-type: none;
+    margin: 15px 0px;
+    color: var(--pale-blue);
+    cursor: pointer;
+}
+
+.options ul li:hover {
+    color: white;
+}
+
+.options ul li.active {
+    color: white;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    width: 815px;
+}
+
+.card {
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+.work::before {
+    background-color: var(--work);
+}
+.play::before {
+    background-color: var(--play);
+}
+.study::before {
+    background-color: var(--study);
+}
+.exercise::before {
+    background-color: var(--exercise);
+}
+.social::before {
+    background-color: var(--social);
+}
+.selfcare::before {
+    background-color: var(--selfcare);
+}
+
+.icon {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+}
+
+.info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--dark-blue);
+    margin-top: 50px;
+    z-index: 10;
+    border-radius: 10px;
+    height: calc(100% - 50px);
+    color: white;
+    padding: 25px;
+}
+
+.info h2 {
+    font-weight: 500;
+}
+
+.info img {
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.info img:hover {
+    color: white;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hours {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.current {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.previous {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--pale-blue);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 20px;
+    left: 50%; 
+    transform: translateX(-50%);
+}
